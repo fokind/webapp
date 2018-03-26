@@ -1,0 +1,27 @@
+<mvc:View
+  controllerName="sap.ui.demo.walkthrough.controller.App"
+  xmlns="sap.m"
+  xmlns:f="sap.ui.layout.form"
+  xmlns:mvc="sap.ui.core.mvc">
+  <Button
+    text="{i18n>showHelloButtonText}"
+    press="onShowHello"/>
+  <Input
+    value="{/recipient/name}"
+    description="Hello {/recipient/name}"
+    valueLiveUpdate="true"
+    width="60%"/>
+  <VBox class="sapUiContentPadding" alignItems="Center" justifyContent="Center" alignContent="Center" fitContainer="true">
+    <f:SimpleForm id="AuthForm"
+      editable="true"
+      layout="ResponsiveGridLayout"
+      title="Авторизация"
+      class="editableForm">
+      <f:content>
+        <Input id="username" placeholder="{i18n>username}" value="{/username}"></Input>
+        <Input id="password" placeholder="{i18n>password}" type="Password" value="{/password}"></Input>
+        <Button text="{i18n>button}" type="Emphasized" press="onPress"></Button>
+      </f:content>
+    </f:SimpleForm>
+  </VBox>
+</mvc:View>
