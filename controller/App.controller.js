@@ -5,6 +5,10 @@ sap.ui.define([
   "sap/m/MessageToast"
 ], function(Controller, MessageToast) {
   return Controller.extend("sap.ui.demo.walkthrough.controller.App", {
+    onInit: function() {
+			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
+    },
+    
     onPress: function() {
       var sUsername = this.getView().getModel().getProperty("/username");
       var sPassword = this.getView().getModel().getProperty("/password");
