@@ -1,30 +1,16 @@
 <mvc:View
-    controllerName="sap.ui.demo.walkthrough.controller.App"
-    xmlns="sap.m"
-    xmlns:f="sap.ui.layout.form"
-    xmlns:mvc="sap.ui.core.mvc">
+	controllerName="sap.ui.demo.walkthrough.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
 	<Page title="{i18n>homePageTitle}">
 		<headerContent>
 			<Button
-          icon="sap-icon://hello-world"
-          press="onOpenDialog"/>
+				icon="sap-icon://hello-world"
+				press="onOpenDialog"/>
 		</headerContent>
 		<content>
 			<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.HelloPanel"/>
 			<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.InvoiceList"/>
-      <VBox class="sapUiContentPadding" alignItems="Center" justifyContent="Center" alignContent="Center" fitContainer="true">
-        <f:SimpleForm id="AuthForm"
-            editable="true"
-            layout="ResponsiveGridLayout"
-            title="Авторизация"
-            class="editableForm">
-          <f:content>
-            <Input id="username" placeholder="{i18n>username}" value="{/username}"></Input>
-            <Input id="password" placeholder="{i18n>password}" type="Password" value="{/password}"></Input>
-            <Button text="{i18n>button}" type="Emphasized" press="onPress"></Button>
-          </f:content>
-        </f:SimpleForm>
-      </VBox>
 		</content>
 	</Page>
 </mvc:View>
